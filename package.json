@@ -2,7 +2,7 @@
   "name": "meu-portifolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Bufetinhas.github.io/meu-portifolio",
+  "homepage": "https://Bufetinhas.github.io/",
   "dependencies": {
     "framer-motion": "^11.11.11",
     "react": "^18.3.1",
