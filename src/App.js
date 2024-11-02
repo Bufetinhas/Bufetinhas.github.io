@@ -4,7 +4,8 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
-import Skills from './components/Skills';
+import Teste from './components/Teste'; // Substitua Skills por Teste
+import CoinCollector from './components/CoinCollector';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AnimatedButton from './components/AnimatedButton';
@@ -14,7 +15,10 @@ function App() {
     <div className="App">
       <Header />
       <About />
-      <Skills />
+      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+        <Teste /> {/* Altere Skills para Teste */}
+        <CoinCollector />
+      </div>
       <Projects />
       <Contact />
       <AnimatedButton text="" onClick={() => {}} /> {}

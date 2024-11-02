@@ -32,3 +32,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.skills-coin-collector-container {
+  display: flex; /* Alinha os filhos em linha */
+  justify-content: space-between; /* Espaço igual entre as seções */
+  margin: 20px 0; /* Adiciona margem acima e abaixo do contêiner */
+}
