@@ -1,0 +1,33 @@
+.contact {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+  color: #e6e6ff;
+  text-align: center;
+}
+.contact h2 {
+  color: #9c88ff;
+  font-size: 2.5rem;
+}
+.contact p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.contact-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-button {
+  text-decoration: none;
+  background-color: #ffffff; /* Fundo inicial branco */
+  color: #000000; /* Texto inicial preto */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+.contact-button:hover {
+  background-color: #000000; /* Fundo preto ao passar o mouse */
+  color: #ffffff; /* Texto branco ao passar o mouse */
+}
