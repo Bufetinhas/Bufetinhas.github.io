@@ -1,63 +1,59 @@
-// src/components/CoinCollector.js
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import './CoinCollector.css'; // Crie um arquivo CSS para o estilo do jogo
 
 function CoinCollector() {
-  const [coins, setCoins] = useState(0);
-  const [coinPos, setCoinPos] = useState({ top: '50%', left: '50%' });
+  const [cookies, setCookies] = useState(0);
+  const [cookiePositions, setCookiePositions] = useState([]);
+  const [score, setScore] = useState(0);
+  const cookieCount = 5; // Número de cookies a serem gerados
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCoinPos({
-        top: `${Math.random() * 80 + 10}%`,
-        left: `${Math.random() * 80 + 10}%`,
-      });
-    }, 4000); // Aparece a cada 4 segundos
-    return () => clearInterval(interval);
+    const generateCookies = () => {
+      const positions = [];
+      for (let i = 0; i < cookieCount; i++) {
+        const x = Math.random() * (window.innerWidth - 50); // Largura da tela menos o tamanho do cookie
+        const y = Math.random() * (window.innerHeight - 50); // Altura da tela menos o tamanho do cookie
+        positions.push({ x, y });
+      }
+      setCookiePositions(positions);
+    };
+
+    generateCookies();
   }, []);
 
-  const handleClickCoin = () => {
-    setCoins(coins + 1);
-    setCoinPos({
-      top: `${Math.random() * 80 + 10}%`,
-      left: `${Math.random() * 80 + 10}%`,
-    });
+  const collectCookie = (index) => {
+    const newPositions = cookiePositions.filter((_, i) => i !== index);
+    setCookiePositions(newPositions);
+    setScore(score + 1); // Incrementa a pontuação
+    if (newPositions.length === 0) {
+      alert('Você coletou todos os cookies!'); // Mensagem quando todos os cookies são coletados
+      setScore(0); // Reseta a pontuação
+      generateCookies(); // Regenera os cookies
+    }
   };
 
   return (
-    <motion.section
-      className="coin-collector"
-      initial={{ background: '#ffffff' }}
-      style={{
-        color: '#000000',
-        padding: '40px',
-        borderRadius: '12px',
-        textAlign: 'center',
-        boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-        cursor: 'pointer',
-        flex: '1',
-        minHeight: '300px',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      <h2 style={{ fontSize: '1.8em', marginBottom: '10px' }}>Colete Bitcoins!</h2>
-      <p>Bitcoins coletados: {coins}</p>
-      <motion.div
-        style={{
-          fontSize: '3em',
-          color: '#f7931a', // Cor laranja do ícone do Bitcoin
-          position: 'absolute',
-          top: coinPos.top,
-          left: coinPos.left,
-          transform: 'translate(-50%, -50%)',
-        }}
-        onClick={handleClickCoin}
-        whileTap={{ scale: 0.8 }}
-      >
-        ₿
-      </motion.div>
-    </motion.section>
+    <div className="coin-collector">
+      <h2>Coletor de Cookies</h2>
+      <p>Cookies coletados: {score}</p>
+      <div className="cookie-container">
+        {cookiePositions.map((pos, index) => (
+          <div
+            key={index}
+            className="cookie"
+            style={{
+              left: pos.x,
+              top: pos.y,
+              position: 'absolute',
+              cursor: 'pointer',
+            }}
+            onClick={() => collectCookie(index)}
+          >
+            🍪
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 

@@ -1,0 +1,18 @@
+.coin-collector {
+  position: relative; /* Permite posicionar os cookies em relação ao contêiner */
+  width: 100%;
+  height: 500px; /* Altura fixa para o contêiner do jogo */
+  overflow: hidden; /* Esconde os cookies que saem da área visível */
+  background-color: #f9f9f9; /* Cor de fundo do jogo */
+  border: 1px solid #e0e0e0; /* Borda sutil */
+  margin: 20px 0; /* Margem em cima e embaixo */
+}
+
+.cookie {
+  font-size: 40px; /* Tamanho do emoji de cookie */
+  transition: transform 0.2s; /* Transição suave para efeitos */
+}
+
+.cookie:hover {
+  transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}

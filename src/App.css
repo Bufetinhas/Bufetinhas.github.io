@@ -1,39 +1,64 @@
-/* src/App.css */
-
-body {
+.App {
   font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.App-header {
   background-color: #f9f9f9;
-}
-
-.App {
-  text-align: center;
-}
-
-.header, .about, .skills, .projects, .contact {
-  margin: 20px auto;
   padding: 20px;
-  max-width: 600px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e0e0e0;
 }
 
-h1, h2 {
-  color: #333;
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centraliza os itens de navegação */
+  gap: 15px;
+  padding: 0;
 }
 
-a {
-  color: #007BFF;
+.nav-links li {
+  /* Opcional: Adicionar margem para melhor espaçamento */
+  margin: 0 5px; 
+}
+
+.nav-links li a {
   text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para efeitos de hover */
 }
 
-a:hover {
-  text-decoration: underline;
+.nav-links li a:hover {
+  background-color: #ddd;
+  color: #222;
 }
-.skills-coin-collector-container {
-  display: flex; /* Alinha os filhos em linha */
-  justify-content: space-between; /* Espaço igual entre as seções */
-  margin: 20px 0; /* Adiciona margem acima e abaixo do contêiner */
+
+main {
+  padding: 20px; /* Adiciona padding à área de conteúdo principal */
+}
+
+.grid {
+  display: grid; /* Usa layout de grid para a seção de projetos básicos */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas responsivas */
+  gap: 20px; /* Espaço entre os itens da grade */
+  margin: 20px 0; /* Margem acima e abaixo da grade */
+}
+
+.project {
+  background-color: #f2f2f2; /* Fundo para os itens de projeto */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+}
+
+.App-footer {
+  background-color: #f9f9f9; /* Mesmo fundo que o cabeçalho para consistência */
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
 }
