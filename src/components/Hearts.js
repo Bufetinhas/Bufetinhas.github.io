@@ -1,28 +1,15 @@
-// src/components/Heart.js
-
 import React from 'react';
-import { motion } from 'framer-motion';
+import './Hearts.css';
 
-const Heart = ({ x, y }) => {
+const Hearts = () => {
   return (
-    <motion.div
-      style={{
-        position: 'absolute',
-        left: x,
-        top: y,
-        fontSize: '24px', // Tamanho do coração
-        color: 'red',
-      }}
-      initial={{ opacity: 1, y: 0 }}
-      animate={{
-        opacity: 0,
-        y: -50, // Animação para subir
-      }}
-      transition={{ duration: 0.5 }}
-    >
-      ❤️
-    </motion.div>
+    <div className="hearts">
+      <span>❤️</span>
+      <span>❤️</span>
+      <span>❤️</span>
+      {/* Adicione mais corações ou crie um efeito de animação */}
+    </div>
   );
 };
 
-export default Heart;
+export default Hearts;

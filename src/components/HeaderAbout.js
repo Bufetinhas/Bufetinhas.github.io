@@ -1,22 +1,22 @@
-// src/components/HeaderAbout.js
 import React from 'react';
+import './HeaderAbout.css';
 
 const HeaderAbout = () => {
-    return (
-        <header className="app-header">
-            <h1 className="header-title">Desenvolvedor Full-Stack</h1>
-            <p className="header-subtitle">.Douglas Tirloni Pereira</p>
-            <section className="about-section">
-                <h2 className="about-title">Sobre Mim</h2>
-                <p className="about-description">
-                    Sou um apaixonado por tecnologia e design, sempre buscando formas inovadoras de resolver problemas e criar experiências interativas. 
-                    Com um background em desenvolvimento e um forte interesse em design de interfaces, estou aqui para compartilhar meus projetos e ideias.
-                    Quando não estou codificando, você pode me encontrar explorando novos jogos ou aprendendo uma abertura nova de Xadrez. 
-                    Estou sempre aberto a colaborações e novos desafios. Vamos nos conectar!
-                </p>
-            </section>
-        </header>
-    );
+  return (
+    <header className="header-about">
+      <div className="header-content">
+        <h1>Bem-vindo ao Meu Portfólio</h1>
+        <p>Sou um desenvolvedor apaixonado, sempre aprendendo e buscando novos desafios. Explore meus projetos e entre em contato!</p>
+        <nav>
+          <ul className="nav-links">
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 };
 
 export default HeaderAbout;
