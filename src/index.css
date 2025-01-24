@@ -1,0 +1,85 @@
+/* Configurações globais */
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Fundo claro */
+  color: #333; /* Texto escuro */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto; /* Adiciona rolagem vertical padrão ao site */
+}
+
+/* Remover barra de rolagem apenas na aba GameDev */
+body.gamedev {
+  overflow-y: hidden; /* Oculta rolagem na aba GameDev */
+}
+
+/* Estilo global para cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Torna todos os textos escuros */
+}
+
+/* Links gerais */
+a {
+  text-decoration: none;
+  color: #61dafb; /* Azul para links */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #333; /* Contraste ao passar o mouse */
+}
+
+/* Botões */
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background-color: #343a40; /* Tom escuro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #61dafb; /* Destaque ao passar o mouse */
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #61dafb;
+}
+
+/* Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Containers gerais */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Ajuste global para listas */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Parágrafos */
+p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  color: #555; /* Tom intermediário para maior legibilidade */
+}
