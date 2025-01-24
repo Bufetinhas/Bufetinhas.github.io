@@ -1,0 +1,84 @@
+.projects {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e1e2f, #2e2e4d); /* Fundo escuro para contraste */
+  color: #e6e6ff; /* Texto claro para melhor legibilidade */
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #61dafb; /* Azul para o título */
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #2c2c54; /* Fundo do card */
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #61dafb; /* Azul claro para os títulos dos projetos */
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #dfe6e9; /* Texto mais claro */
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.view-project-button {
+  background: #61dafb;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.view-project-button:hover {
+  background: #1e90ff; /* Azul mais escuro no hover */
+  transform: scale(1.05);
+}
+
+.view-project-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .projects {
+    padding: 30px 10px;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+}
